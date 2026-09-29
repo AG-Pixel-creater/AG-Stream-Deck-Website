@@ -1170,6 +1170,7 @@ button {
 }
 
 .dl-btn {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -1179,22 +1180,104 @@ button {
   border: 1px solid var(--border-strong);
   text-align: start;
   transition: all 0.25s ease;
+  overflow: hidden;
 }
 
-.dl-btn:hover {
-  border-color: rgba(79, 140, 255, 0.5);
+/* ACTIVE button (Windows) */
+.dl-btn--active {
+  border-color: rgba(79, 140, 255, 0.45);
   background: var(--code-bg);
+  cursor: pointer;
+}
+
+.dl-btn--active::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(79, 140, 255, 0.15) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: shine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0%, 60% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.dl-btn--active:hover {
+  border-color: var(--primary);
+  background: rgba(79, 140, 255, 0.12);
   transform: translateY(-3px);
   box-shadow: 0 12px 26px -12px var(--primary-glow);
 }
 
-.dl-btn svg { width: 26px; height: 26px; color: var(--primary-2); flex-shrink: 0; }
+/* COMING SOON button (macOS, Linux) */
+.dl-btn--soon {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: grayscale(0.35);
+}
 
-.dl-btn span { display: flex; flex-direction: column; line-height: 1.3; }
+.dl-btn--soon:hover {
+  transform: none;
+  border-color: var(--border-strong);
+  background: rgba(128, 140, 160, 0.04);
+}
+
+.dl-btn svg {
+  width: 26px;
+  height: 26px;
+  color: var(--primary-2);
+  flex-shrink: 0;
+}
+
+.dl-btn--soon svg { color: var(--text-dim); }
+
+.dl-btn span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
 .dl-btn strong { font-size: 0.92rem; font-weight: 700; }
 .dl-btn small { font-size: 0.72rem; color: var(--text-dim); }
 
-.download__note { font-size: 0.82rem; color: var(--text-dim); margin-top: 8px; }
+/* "Soon" badge */
+.dl-badge {
+  position: absolute;
+  top: 10px;
+  inset-inline-end: 10px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(234, 179, 8, 0.15);
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  color: var(--yellow);
+}
+
+.download__note {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+
+.download__subnote {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-strong);
+}
 
 /* =========================================================
    FAQ

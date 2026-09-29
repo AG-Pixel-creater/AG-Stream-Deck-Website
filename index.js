@@ -92,7 +92,11 @@
       'dl.pill': 'Latest Release — v0.0.1',
       'dl.title': 'AG Stream Deck Download',
       'dl.desc': 'Early access build. Pick your platform and turn your PC into a streaming server.',
+      'dl.win': '.exe • 64-bit • Download',
+      'dl.comingSoon': 'Coming Soon',
+      'dl.badgeSoon': 'Soon',
       'dl.note': 'Note: Nothing to install on the client device — just open the server URL in a browser.',
+      'dl.subnote': 'Currently only the Windows build is available. macOS and Linux versions are in development.',
 
       'faq.eyebrow': 'FAQ',
       'faq.title': 'Common questions',
@@ -201,7 +205,11 @@
       'dl.pill': 'تازہ ترین ریلیز — v0.0.1',
       'dl.title': 'AG اسٹریم ڈیک ڈاؤن لوڈ',
       'dl.desc': 'ابتدائی رسائی بلڈ۔ اپنا پلیٹ فارم چنیں اور اپنے پی سی کو اسٹریمنگ سرور بنائیں۔',
+      'dl.win': '.exe • 64-bit • ڈاؤن لوڈ',
+      'dl.comingSoon': 'جلد آ رہا ہے',
+      'dl.badgeSoon': 'جلد',
       'dl.note': 'نوٹ: کلائنٹ ڈیوائس پر کچھ انسٹال نہیں کرنا — صرف براؤزر میں سرور یو آر ایل کھولیں۔',
+      'dl.subnote': 'فی الحال صرف ونڈوز بلڈ دستیاب ہے۔ میک او ایس اور لینکس ورژنز پر کام جاری ہے۔',
 
       'faq.eyebrow': 'سوالات',
       'faq.title': 'عام سوالات',

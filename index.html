@@ -400,7 +400,7 @@
     </div>
   </section>
 
-  <!-- ================= DOWNLOAD ================= -->
+<!-- ================= DOWNLOAD ================= -->
   <section class="section" id="download">
     <div class="container">
       <div class="download reveal">
@@ -414,46 +414,59 @@
         </p>
 
         <div class="download__grid">
-          <a href="#" class="dl-btn">
+          <!-- WINDOWS — ACTIVE -->
+          <a href="https://github.com/AG-Pixel-creater/AG-Stream-Deck-Website/releases/download/v0.0.1/AG_Stream_DeckSetup.exe"
+             class="dl-btn dl-btn--active"
+             download
+             target="_blank"
+             rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M0 3.45 9.75 2.1v9.45H0zM10.95 1.94 24 0v11.55H10.95zM0 12.45h9.75v9.45L0 20.55zM10.95 12.45H24V24l-13.05-1.94z"/>
             </svg>
             <span>
               <strong>Windows</strong>
-              <small>.exe • 64-bit</small>
+              <small data-i18n="dl.win">.exe • 64-bit • Download</small>
             </span>
           </a>
 
-          <a href="#" class="dl-btn">
+          <!-- macOS — COMING SOON -->
+          <div class="dl-btn dl-btn--soon" aria-disabled="true">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.05 12.53c-.02-2.4 1.96-3.55 2.05-3.61-1.12-1.64-2.86-1.86-3.48-1.89-1.48-.15-2.89.87-3.64.87-.75 0-1.91-.85-3.14-.83-1.61.02-3.1.94-3.93 2.38-1.68 2.91-.43 7.22 1.2 9.58.8 1.16 1.75 2.46 3 2.41 1.21-.05 1.66-.78 3.12-.78s1.87.78 3.14.75c1.3-.02 2.12-1.18 2.91-2.34.92-1.34 1.3-2.64 1.32-2.71-.03-.01-2.53-.97-2.55-3.83zM14.7 5.4c.66-.8 1.11-1.92.99-3.03-.95.04-2.11.64-2.8 1.44-.61.71-1.15 1.85-1.01 2.94 1.07.08 2.16-.54 2.82-1.35z"/>
             </svg>
             <span>
               <strong>macOS</strong>
-              <small>.dmg • Universal</small>
+              <small data-i18n="dl.comingSoon">Coming Soon</small>
             </span>
-          </a>
+            <span class="dl-badge" data-i18n="dl.badgeSoon">Soon</span>
+          </div>
 
-          <a href="#" class="dl-btn">
+          <!-- LINUX — COMING SOON -->
+          <div class="dl-btn dl-btn--soon" aria-disabled="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="3" width="20" height="18" rx="2"></rect>
               <path d="M7 9l3 3-3 3M13 15h4"></path>
             </svg>
             <span>
               <strong>Linux</strong>
-              <small>.AppImage / .deb</small>
+              <small data-i18n="dl.comingSoon">Coming Soon</small>
             </span>
-          </a>
+            <span class="dl-badge" data-i18n="dl.badgeSoon">Soon</span>
+          </div>
         </div>
 
         <p class="download__note" data-i18n="dl.note">
           Note: Client device par kuch install nahi karna — sirf browser mein
           server URL kholein.
         </p>
+
+        <p class="download__subnote" data-i18n="dl.subnote">
+          Filhal sirf Windows build available hai. macOS aur Linux versions
+          par kaam jaari hai.
+        </p>
       </div>
     </div>
   </section>
-
   <!-- ================= FAQ ================= -->
   <section class="section section--alt" id="faq">
     <div class="container">
